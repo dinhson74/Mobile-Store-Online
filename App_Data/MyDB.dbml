@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbQuanLyBanHang" Class="MyDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\dbQuanLyBanHang.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dbQuanLyBanHangConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.PS_LOGIN" Method="PS_LOGIN">
+    <Parameter Name="TENTAIKHOAN" Parameter="tENTAIKHOAN" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="MATKHAU" Parameter="mATKHAU" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PS_USERINFO" Method="PS_USERINFO">
+    <Parameter Name="IDMAKH" Parameter="iDMAKH" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PS_USERINFOResult">
+      <Column Name="IDMAKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENTAIKHOAN" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MATKHAU" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
